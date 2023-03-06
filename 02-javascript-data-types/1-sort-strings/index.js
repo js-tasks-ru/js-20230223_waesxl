@@ -1,5 +1,5 @@
 export function sortStrings(arr, param = 'asc') {
-    let [newArr, location] = [[...arr], ['ru-RU-u-kf-upper', 'en-US-u-kf-upper']]
+    const [newArr, location] = [[...arr], ['ru-RU-u-kf-upper', 'en-US-u-kf-upper']]
     if(param === 'asc') {
         newArr.sort((a, b) => a.localeCompare(b, location));
     }
@@ -8,5 +8,3 @@ export function sortStrings(arr, param = 'asc') {
     }
     return newArr;
 }
-
-sortStrings(['b', 'a', 'c'], 'asc')
